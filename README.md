@@ -12,6 +12,8 @@ This is a full cycle implementation of the Box API.  It includes:
 
 More api intergration to come.
 
+Future enhancements include using the Box View Api to generate thumbnails for more file types, and integration with the Box View API.
+
 ## Installation
 npm install node-fullbox-api
 

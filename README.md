@@ -17,20 +17,20 @@ npm install node-fullbox-api
 
 ## Setup and Use
 
-var BOX = require('node-fullbox-api');
-var Box = new BOX(box_options);
+    var BOX = require('node-fullbox-api');  
+    var Box = new BOX(box_options);
 
 **Box Options**
 
-{
-    authorize_url : _<box authorizarion endpoint>_,
-    token_url : _<box token endpoint>_,
-    user_name : _<box user name>_,
-    password : _<box user password>_,
-    client_id : _<box api client id>_,
-    client_secret : _<box api client secret>_,
-    base_url: _<box content api endpoint>_,
-    upload_url: _<box content upload api endpoint>_,
-    auto_rename : _<true or false for auto-renaming uploaded files in the case of name collisions>_
-}
+    {  
+    authorize_url : <box authorizarion endpoint>,  
+    token_url : <box token endpoint>,  
+    user_name : <box user name>,  
+    password : <box user password>,  
+    client_id : <box api client id>,  
+    client_secret : <box api client secret>,  
+    base_url: <box content api endpoint>,  
+    upload_url: <box content upload api endpoint>,  
+    auto_rename : <true or false for auto-renaming uploaded files in the case of name collisions>  
+    }  
 

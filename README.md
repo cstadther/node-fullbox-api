@@ -34,3 +34,21 @@ npm install node-fullbox-api
     auto_rename : <true or false for auto-renaming uploaded files in the case of name collisions>  
     }  
 
+### Functions
+
+All of the functions first check for a valid token.  If one is not found it first tries to refresh the last token, otherwise makes a request for a new token.
+
+**Box.uploadfile(values, callback);**  
+Values  
+    
+    {  
+    filename : <name of file to be uploaded>,  
+    folderid : <Box folder id to upload file to>,  
+    filepath : <path to file to be uploaded>  
+    }  
+
+Callback
+
+    function(data) {
+        /* data is the json data returned for the box file */
+    }

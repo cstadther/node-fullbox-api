@@ -63,7 +63,7 @@ Function to get file information from Box.  The JSON returned is identical to th
 Values  
     
     {  
-    filenid : <Box file id>
+    fileid : <Box file id>
     }  
 
 Callback
@@ -79,7 +79,7 @@ Creates a shared link for a box file.  The JSON returned is identical to the JSO
 Values  
     
     {  
-    filenid : <Box file id>,
+    fileid : <Box file id>,
     access : <access type to grant>, /* open, company, collaborators, null (default is open, null removes shared link) */
     can_download : <true or false> /* determines of downloads of file is available */    
     }  
@@ -97,6 +97,6 @@ Returns a stream of the image thumbnail for a file in box.  If the file is an im
 Values  
     
     {  
-    filenid : <Box file id>,
+    fileid : <Box file id>,
     response_stream : <the writable stream where to pipe the servers response, which is the image bytes>    
     }  

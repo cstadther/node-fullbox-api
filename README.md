@@ -31,7 +31,7 @@ npm install node-fullbox-api
     client_secret : <box api client secret>,  
     base_url: <box content api endpoint>,  
     upload_url: <box content upload api endpoint>,  
-    auto_rename : <true or false for auto-renaming uploaded files in the case of name collisions>  
+    auto_rename : <true or false> (auto-renaming uploaded files in the case of name collisions)  
     }  
 
 ### Functions
@@ -39,6 +39,9 @@ npm install node-fullbox-api
 All of the functions first check for a valid token.  If one is not found it first tries to refresh the last token, otherwise makes a request for a new token.
 
 **Box.uploadfile(values, callback);**  
+
+Function to upload a file to Box.  The JSON returned is identical to the JSON the standard API returns.
+
 Values  
     
     {  
@@ -52,3 +55,48 @@ Callback
     function(data) {
         /* data is the json data returned for the box file */
     }
+
+**Box.getfileinfo(values, callback);**  
+
+Function to get file information from Box.  The JSON returned is identical to the JSON the standard API returns.
+
+Values  
+    
+    {  
+    filenid : <Box file id>
+    }  
+
+Callback
+
+    function(data) {
+        /* data is the json data returned for the box file */
+    }
+
+**Box.createsharedlink(values, callback);**  
+
+Creates a shared link for a box file.  The JSON returned is identical to the JSON the standard API returns.
+
+Values  
+    
+    {  
+    filenid : <Box file id>,
+    access : <access type to grant>, /* open, company, collaborators, null (default is open, null removes shared link) */
+    can_download : <true or false> /* determines of downloads of file is available */    
+    }  
+
+Callback
+
+    function(data) {
+        /* data is the json data returned for the box file */
+    }
+
+**Box.getthumbnail(values);**  
+
+Returns a stream of the image thumbnail for a file in box.  If the file is an image or movie type a thumbnail will be returned.  If not an image or movie, the file type icon from box will be returned, otherwise a generic default image is returned.
+
+Values  
+    
+    {  
+    filenid : <Box file id>,
+    response_stream : <the writable stream where to pipe the servers response, which is the image bytes>    
+    }  

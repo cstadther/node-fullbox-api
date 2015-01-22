@@ -7,7 +7,7 @@
     "authentication",
     "api"
   ],
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Christopher Stadther <c.stadther@gmail.com> (http://www.twitter.com/cstad/)",
   "license": "MIT",
   "main": "lib/index.js",
